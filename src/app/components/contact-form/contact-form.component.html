@@ -1,0 +1,12 @@
+<!-- src/app/contact-form/contact-form.component.html -->
+<form (ngSubmit)="saveContact()">
+    <h2>{{ isEditMode ? 'Edit Contact' : 'Add New Contact' }}</h2>
+    <label for="name">Name:</label>
+    <input id="name" type="text" [(ngModel)]="contact.name" name="name" required />
+    
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" type="text" [(ngModel)]="contact.phoneNumber" name="phoneNumber" required />
+  
+    <button type="submit">{{ isEditMode ? 'Save' : 'Add' }}</button>
+  </form>
+  
